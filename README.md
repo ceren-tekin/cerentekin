@@ -12,9 +12,11 @@ The objective of this project is to investigate the effects of climate change on
    
    Import and preprocess the dataset from Kaggle, ensuring the correct handling of missing data and standardizing the data formats.
 2. **Data Analysis**
-
-   Analyze significant relationships using statistical visualizations, conduct regression analysis to determine the extent to which climate variables impact crop yield and examine how crop yiled trends vary between contries and across different climate conditions.
-3. **Reporting**
+   
+   Investigate the relationships between climate factors (such as temperature and rainfall) and crop yield through visual tools like scatter plots. To measure the influence of climate variables on crop yield, regression analysis will be employed. Also examine how crop yield trends evolve over time in various regions to understand the role of geographic differences on agricultural productivity. Furthermore, evaluate the effect of extreme weather events on crop yield by correlating these events with changes in yield. Finally, various visualizations, such as line graphs and bar charts will be used to display the trends and relationships identified in the analysis.
+ 
+  
+4. **Reporting**
 
    Create a etailed report summarizing key findings, limitations, and suggestions for future research.
    
