@@ -5,6 +5,12 @@
 The objective of this project is to investigate the effects of climate change on agricultural prosuctivity and sustainability by exploring key factors such as temperature, rainfall, CO2 levels, and crop yield. by applying statistical analysis and machine learning methos, the aim is to uncover patterns, correlations, and trends that could help predict future impacts on agriculture. The dataset used for this project is provided by the Kaggle, 'Waqar Ali'. 
 
 ---
+## Hypothesis
+
+1. **Null Hypothesis (H₀):** Climate variables have no significant impact on crop yield.
+2. **Alternative Hypothesis (H₁):** Climate variables (temperature, precipitation, CO2) significantly impact crop yield.
+
+---
 
 ## Plan 
 
