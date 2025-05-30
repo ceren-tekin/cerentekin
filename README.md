@@ -45,6 +45,57 @@ The dataset used in this project is "Climate Change Impact on Agriculture" provi
 - **Extreme_Weather_Events**: Number of modeled extreme weather occurrences per year.
 
 ---
+## Machine Learning Analysis
+To further explore how various environmental variables affect agricultural productivity, we implemented supervised machine learning models to predict crop yield. As required, linear regression was excluded, and hyperparameter tuning was applied using GridSearchCV.
+
+### Regression Models with Hyperparameter Tuning
+- **Random Forest Regressor**
+- **Decision Tree Regressor**
+- **K-Nearest Neighbors (KNN) Regressor**
+
+Each model was evaluated using:
+- **R² Score** – Measures explanatory power of the model  
+- **Mean Squared Error (MSE)** – Measures average squared difference between actual and predicted values  
+- **Mean Absolute Error (MAE)** – Measures the average magnitude of the errors  
+- **Visual analysis** – Actual vs. predicted crop yield plots
+
+## Results of the Analysis
+
+### Univariate Analysis
+- **Average Temperature**: Histogram showed a slightly right-skewed distribution, with most values clustered around moderate climates. High temperature values were less frequent.
+- **Crop Yield**: Most yields ranged between 2.0 and 4.5 MT/HA, indicating variability in productivity across regions and years.
+- **CO₂ Emissions**: Distribution suggested higher emissions in recent years, which may correlate with industrial or population growth.
+- **Extreme Weather Events**: The majority of records showed low to moderate occurrences per year.
+
+### Bivariate Analysis
+- **CO₂ Emissions vs. Crop Yield**: Scatter plots indicated a complex, slightly nonlinear negative trend between emissions and productivity.
+- **Extreme Weather Events vs. Crop Yield**: Boxplots revealed that years with more extreme weather were generally associated with lower yields.
+- **Soil Health and Irrigation vs. Crop Yield**: Both factors showed positive correlation with yield—regions with better irrigation and healthier soil had higher productivity.
+
+### Multivariate Analysis
+- **Correlation Heatmap**: Key observations included:
+  - Negative correlation between extreme weather and crop yield  
+  - Positive correlation between soil health and irrigation access with crop yield  
+  - Weak correlations among some climate variables and yield, suggesting interaction effects  
+- **Combined Influence**: Regions with moderate temperature, stable rainfall, and low extreme weather incidents consistently showed better crop performance.
+
+## Machine Learning Results
+The performance of the trained models is summarized below:
+
+| Model            | Mean Squared Error (MSE) | R² Score | Mean Absolute Error (MAE) |
+|------------------|--------------------------|----------|----------------------------|
+| Random Forest    | 29045.67                 | -0.978   | 102.95                     |
+| Decision Tree    | 55545.78                 | -2.782   | 86.21                      |
+| KNN              | 20521.98                 | -0.397   | 77.88                      |
+
+**Interpretation**:  
+Although KNN had the lowest MSE and MAE, none of the models achieved a positive R² score, indicating limited predictive power. This could be due to data noise, unaccounted categorical effects (e.g. crop type), or limitations in data quality.
+
+### Findings
+- **Soil Health** and **Irrigation Access** positively influence yield.  
+- **Extreme Weather Events** and **CO₂ Emissions** generally correlate negatively with yield.  
+- **Temperature and Precipitation** have mixed or nonlinear effects.  
+- Combining multiple favorable environmental factors leads to higher crop performance.
 
 ## Conclusion
 
